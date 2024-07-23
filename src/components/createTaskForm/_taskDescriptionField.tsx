@@ -3,6 +3,7 @@ import React, { FC, ReactElement } from 'react';
 import { TextField } from '@mui/material';
 import { ITextChange } from './interfaces/ITextChange';
 
+import PropTypes from 'prop-types';
 
 export const TaskDescriptionField:  FC<ITextChange> = (props): ReactElement => {
   // Destructure props
@@ -24,3 +25,9 @@ export const TaskDescriptionField:  FC<ITextChange> = (props): ReactElement => {
       />
     );
   };
+
+
+  TaskDescriptionField.propTypes = {
+    onChange: PropTypes.func,
+    disabled: PropTypes.bool,
+  }
