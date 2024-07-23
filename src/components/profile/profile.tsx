@@ -25,7 +25,7 @@ export const Profile: FC = (props:any): ReactElement => {
         </Typography>
       </Avatar>
       <Typography variant="h6" color="text.primary">
-       {`Hello, ${name}`} 
+       {`Hi, ${name}`} 
       </Typography>
       <Typography variant="body1" color="text.primary">
         This is your personal tasks manager
