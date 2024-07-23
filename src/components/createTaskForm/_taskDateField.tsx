@@ -16,19 +16,19 @@ export const TaskDateField: FC<IDateField> = (
   const {
     value = new Date(),
     disabled = false,
-    onChange = (newDate) =>  setDate(newDate) ,
+    onChange = (newDate) => console.log(newDate),
   } = props;
 
 
-  const [date, setDate] = React.useState<Date | null>(null);
+  // const [date, setDate] = React.useState<Date | null>(null);
   return (
-  
+
     <>
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <DatePicker
           label="Select Date"
           inputFormat="dd/MM/yyyy"
-          value={date}
+          value={value}
           onChange={onChange}
           disabled={disabled}
           renderInput={(params) => (
