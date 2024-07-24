@@ -21,7 +21,7 @@ export const TaskDateField: FC<IDateField> = (
   } = props;
 
 
-  // const [date, setDate] = React.useState<Date | null>(null);
+  const [date, setDate] = React.useState<Date | null>(null);
   return (
 
     <>
