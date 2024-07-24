@@ -5,13 +5,11 @@ import { customTheme } from './theme/customTheme';
 import { Dashboard } from './pages/dashboard/dashboard';
 
 
-const App: FC = (): ReactElement => {
-  return (
-    <ThemeProvider theme={customTheme}>
-      <CssBaseline />
-      <Dashboard />
-    </ThemeProvider>
-  );
-};
+const App: FC = (): ReactElement => (
+  <ThemeProvider theme={customTheme}>
+    <CssBaseline />
+    <Dashboard />
+  </ThemeProvider>
+);
 
 export default App;

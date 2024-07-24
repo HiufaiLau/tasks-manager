@@ -8,6 +8,7 @@ import { IDateField } from './interfaces/IDateField';
 import { TextField } from '@mui/material';
 
 import PropTypes from 'prop-types';
+import { TaskSelectField } from './_taskSelectField';
 
 export const TaskDateField: FC<IDateField> = (
   props,
