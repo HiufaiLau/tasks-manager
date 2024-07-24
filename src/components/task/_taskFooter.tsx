@@ -1,11 +1,54 @@
-import React , { FC , ReactElement } from "react";
-
-
-export const TaskFooter: FC = (): ReactElement => {    
+import {
+    Box,
+    Button,
+    FormControlLabel,
+    Switch,
+  } from '@mui/material';
+  import React, { FC, ReactElement } from 'react';
+  
+  import { ITaskFooter } from './interfaces/ITaskFooter';
+  import PropTypes from 'prop-types';
+  
+  export const TaskFooter: FC<ITaskFooter> = (
+    props,
+  ): ReactElement => {
+    //  Destructure props
+    const {
+      onStatusChange = (e) => console.log(e),
+      onClick = (e) => console.log(e),
+    } = props;
+  
     return (
-        <div>
-            <h2>Task Description</h2>
-            <p>Task Description</p>
-        </div>
-    )
-}
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        mt={4}
+      >
+        <FormControlLabel
+          label="In Progress"
+          control={
+            <Switch
+              onChange={(e) => onStatusChange(e)}
+              color="warning"
+              inputProps={{ 'aria-label': 'controlled' }}
+            />
+          }
+        />
+        <Button
+          variant="contained"
+          color="success"
+          size="small"
+          sx={{ color: '#ffffff' }}
+          onClick={(e) => onClick(e)}
+        >
+          Mark Complete
+        </Button>
+      </Box>
+    );
+  };
+  
+  TaskFooter.propTypes = {
+    onStatusChange: PropTypes.func,
+    onClick: PropTypes.func,
+  };

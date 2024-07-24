@@ -39,7 +39,7 @@ export const CreateTaskForm: FC = (): ReactElement => {
           ]}/>
           <TaskSelectField label='Priority' name='priority' items={[
             { value: Priority.low, label: Priority.low.toUpperCase() },
-            { value: Priority.medium, label: Priority.medium.toUpperCase() },
+            { value: Priority.normal, label: Priority.normal.toUpperCase() },
             { value: Priority.high, label: Priority.high.toUpperCase() },
           ]}/>
         </Stack>
