@@ -38,9 +38,8 @@ export const CreateTaskForm: FC = (): ReactElement => {
   const [priority, setPriority] = useState<string>(
     Priority.normal,
   );
-  const [showSuccess, setShowSuccess] =
-    useState<boolean>(false);
-
+ const [showSuccess, setShowSuccess] = useState<boolean>(false);
+ 
   // Create task mutation
   const createTaskMutation = useMutation(
     // (data)=> sendApiRequest('http://localhost:3200/tasks','POST',data),

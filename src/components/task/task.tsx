@@ -41,6 +41,7 @@ export const Task: FC<ITask> = (props): ReactElement => {
       <TaskHeader title={title} date={date} />
       <TaskDescription description={description} />
       <TaskFooter
+      id=''
         onClick={onClick}
         onStatusChange={onStatusChange}
       />
