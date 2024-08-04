@@ -5,8 +5,6 @@ import { TaskCounter } from '../taskCounter/taskCounter';
 import { format } from 'date-fns';
 import { Task } from '../task/task';
 
-import PropTypes from "prop-types";
-
 export const TaskArea: FC = (): ReactElement => {
   return (
     <Grid item md={8} px={4}>
