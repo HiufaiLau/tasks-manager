@@ -1,4 +1,4 @@
 export interface IUpdateTask {
-    id: string;
-    status: string;
-  }
+  id: string;
+  status: string;
+}

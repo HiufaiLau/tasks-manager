@@ -14,7 +14,7 @@ import React, {
   useState,
 } from 'react';
 
-
+import { ICreateTask } from '../taskArea/interfaces/ICreatedTask';
 import { Priority } from './enums/Priority';
 import { Status } from './enums/Status';
 import { TaskDateField } from './_taskDateField';
@@ -23,7 +23,6 @@ import { TaskSelectField } from './_taskSelectField';
 import { TaskTitleField } from './_taskTitleField';
 import { sendApiRequest } from '../../helpers/sendApiRequest';
 import { useMutation } from 'react-query';
-import { ICreateTask } from '../taskArea/interfaces/ICreatedTask';
 
 export const CreateTaskForm: FC = (): ReactElement => {
   // declare component states
@@ -38,11 +37,11 @@ export const CreateTaskForm: FC = (): ReactElement => {
   const [priority, setPriority] = useState<string>(
     Priority.normal,
   );
- const [showSuccess, setShowSuccess] = useState<boolean>(false);
- 
+  const [showSuccess, setShowSuccess] =
+    useState<boolean>(false);
+
   // Create task mutation
   const createTaskMutation = useMutation(
-    // (data)=> sendApiRequest('http://localhost:3200/tasks','POST',data),
     (data: ICreateTask) =>
       sendApiRequest(
         'http://localhost:5000/tasks',
